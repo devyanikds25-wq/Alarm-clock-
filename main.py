@@ -1,4 +1,3 @@
-
 import time
 
 def set_alarm():
@@ -10,9 +9,12 @@ def check_time(alarm_time):
     while True:
         current_time = time.strftime("%H:%M")
         if current_time == alarm_time:
-            print("Time matched!")
+            trigger_alert()
             break
         time.sleep(1)
+
+def trigger_alert():
+    print("ALARM! WAKE UP!")
 
 alarm_time = set_alarm()
 check_time(alarm_time)
