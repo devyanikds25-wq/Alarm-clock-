@@ -1,17 +1,6 @@
 import time
+def set_alarm():
+    return input("Enter alarm time (HH:MM): ")
 
-print("SIMPLE ALARM CLOCK")
-
-alarm_time = input("Enter alarm time (HH:MM): ")
-
+alarm_time = set_alarm()
 print("Alarm set for:", alarm_time)
-print("Waiting for alarm...")
-
-while True:
-    current_time = time.strftime("%H:%M")
-
-    if current_time == alarm_time:
-        print("ALARM! WAKE UP!")
-        break
-
-    time.sleep(1)
